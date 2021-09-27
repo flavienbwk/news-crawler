@@ -1,0 +1,7 @@
+tqdm==4.62.3
+playwright==1.14.1
+Pillow==8.3.2
+lxml==4.6.3
+python-slugify==5.0.2
+SQLAlchemy==1.4.25
+psycopg2==2.9.1

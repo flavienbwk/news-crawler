@@ -1,0 +1,9 @@
+database/*
+!database/.gitkeep
+.env
+**__pycache__**
+logs/*
+!logs/.gitkeep
+
+news-crawler/crawlers/*/
+!news-crawler/crawlers/lemonde/

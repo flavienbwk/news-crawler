@@ -1,0 +1,20 @@
+version: '3'
+
+services: 
+
+  crawler:
+    build: .
+    command: python3 /usr/app/main.py
+    volumes:
+      - "./news-crawler:/usr/app:ro"
+      - "./database:/usr/database:rw"
+      - "./logs:/usr/logs:rw"
+    environment:
+      CRAWLER_SOURCE: ${CRAWLER_SOURCE}
+      CRAWLER_EMAIL: ${CRAWLER_EMAIL}
+      CRAWLER_PASSWORD: ${CRAWLER_PASSWORD}
+      RETRIEVE_RELATED_ARTICLE_LINKS: "false"
+      RETRIEVE_EACH_ARTICLE_LINKS: "false"
+      IS_DOCKER: "true"
+      LOG_LEVEL: "INFO"
+      PROJECT_NAME: "news-crawler"
