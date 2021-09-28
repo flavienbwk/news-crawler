@@ -58,5 +58,5 @@ class Persister:
                 )
                 for object in self.objects:
                     self.add_object_to_session(object)
-                wait_time = 0
+                wait_time = 3
         self.objects = []
