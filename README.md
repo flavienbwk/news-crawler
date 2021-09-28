@@ -9,6 +9,7 @@ If you need web security consulting to avoid scraping, contact me on [berwick.fr
 | Supported newspaper | CRAWLER_SOURCE | Requires account            |
 | ------------------- | -------------- | --------------------------- |
 | Le Monde            | `lemonde`      | Yes _(Premium recommended)_ |
+| Reuters             | `reuters`      | No                          |
 
 :warning: **DISCLAIMER : This project is for educational purpose only ! Do NOT use it for any other intent.** It was developed as a fun side-project to train my scraping skills.
 
@@ -66,7 +67,7 @@ News-Crawler browses articles from newspaper websites and store them in a SQLite
 
 | Name                           | Type | Description                                                                 |
 | ------------------------------ | ---- | --------------------------------------------------------------------------- |
-| CRAWLER_SOURCE                 | str  | Slug corresponding to the crawler to use (e.g: `lemonde`, `afp`)            |
+| CRAWLER_SOURCE                 | str  | Slug corresponding to the crawler to use (e.g: `lemonde`, `reuters`)        |
 | CRAWLER_EMAIL                  | str  | Newspaper email address                                                     |
 | CRAWLER_PASSWORD               | str  | Newspaper password                                                          |
 | START_LINK                     | str  | After login, start scraping articles from this page                         |

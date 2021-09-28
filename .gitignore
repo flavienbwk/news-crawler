@@ -7,3 +7,4 @@ logs/*
 
 news-crawler/crawlers/*/
 !news-crawler/crawlers/lemonde/
+!news-crawler/crawlers/reuters/

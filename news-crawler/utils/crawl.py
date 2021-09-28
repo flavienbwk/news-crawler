@@ -100,10 +100,10 @@ def get_elements_from_one_of_selectors(
     return item
 
 
-def random_scroll(page: Page):
+def random_scroll(page: Page, intensifier: float = 1.0):
     size = page.viewport_size
-    scroll_to = int(size["height"] * (1.0 - (random.randrange(1, 8) / 10)))
-    page.evaluate(f"window.scrollBy(0, {scroll_to})")
+    scroll_to = int(size["height"] * (1.0 - (random.randrange(5, 8) / 10)))
+    page.mouse.wheel(0, scroll_to * intensifier)
 
 
 def random_mouse_move(page: Page, max_height: int, max_width: int):
@@ -112,9 +112,15 @@ def random_mouse_move(page: Page, max_height: int, max_width: int):
     page.mouse.move(x, y)
 
 
-def random_activity(page: Page, page_height: int, page_width: int):
+def random_activity(
+    page: Page, page_height: int = 0, page_width: int = 0, intensifier: float = 1.0
+):
     """Simulates user activity on page"""
-    random_scroll(page)
+    size = page.viewport_size
+    page_height = page_height if page_height != 0 else size["height"]
+    page_width = page_width if page_width != 0 else size["height"]
+
+    random_scroll(page, intensifier=intensifier)
     time.sleep(random.randint(0, 1000) / 1000.0)
     random_mouse_move(page, page_height, page_width)
     time.sleep(random.randint(0, 1000) / 1000.0)

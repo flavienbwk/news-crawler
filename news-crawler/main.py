@@ -17,8 +17,8 @@ DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 COOKIES_DIR = f"{DIR_PATH}/../database"
 
 PERSIST_BATCH = 1  # Number of articles to be saved at the same time
-PAGE_HEIGHT = 976
-PAGE_WIDTH = 960
+PAGE_HEIGHT = 850
+PAGE_WIDTH = 768
 
 CRAWLER_EMAIL = os.getenv("CRAWLER_EMAIL")
 CRAWLER_PASSWORD = os.getenv("CRAWLER_PASSWORD")
