@@ -100,7 +100,7 @@ class Crawler(CrawlerBase):
                     ):
                         new_hrefs.append(new_article_link)
         except AttributeError as e:
-            LOGGER.info("Could not retrieve more links for this article", flush=True)
+            LOGGER.info("Could not retrieve more links for this article")
 
         if self.options["retrieve_each_article_links"]:
             new_article_links = get_article_links_from_element(self.page)
